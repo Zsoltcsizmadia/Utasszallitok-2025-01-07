@@ -9,7 +9,19 @@
             {
                 jarmuadatok.Add(new Jarmuadat(sor));
             }
+            //4.
             Console.WriteLine($"4. feladat: {jarmuadatok.Count} darab repűlőgép van");
+
+            //5.
+            int boeing = 0;
+            foreach (var r in jarmuadatok)
+            {
+                string[] b = r.Típus.Split("Boeing");
+                boeing++;
+            }
+            double gepek = (boeing - jarmuadatok.Count);
+
+            Console.WriteLine($"5. feladat: {gepek} darab Boeing repűlőgép van");
         }
     }
 }
